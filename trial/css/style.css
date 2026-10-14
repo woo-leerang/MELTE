@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+/* 폰트 페이퍼로지 */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* ----------------------------------------------------- */
+
+/* 기본설정 */
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #56493B;
+    font-family: 'Paperozi';
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #56493B;
+}
+
+img {
+    display: block;
+}
+
+body {
+    -ms-overflow-style: none;
+    line-height: 1.5;
+
+    color: #56493B;
+    background-color: #f7f5f0;
+    margin: 0 auto;
+
+}
+
+.allwrap {
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+        max-width: 1440px;
+}
+
+.allwrap>div {
+    scroll-snap-align: center;
+}
+
+/* _______________________ */
+
+/* main */
+/* 상단 헤더 영역 전체 컨테이너 */
+header {
+    width: 100%;
+    /* 평소 헤더 배경색 */
+    background-color: #F7F3ED;
+    padding: 20px 40px;
+    /* 배경색과 글자색이 부드럽게 변하도록 전환 효과 부여 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 헤더 영역 전체에 마우스를 올렸을 때 배경색 변경 */
+header:hover {
+    background-color: #DCD2C8; /* 원하시는 배경색으로 조절 가능 */
+}
+
+/* 로고와 양옆 메뉴를 3단(좌/중앙/우)으로 정렬하는 컨테이너 */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* 좌측, 우측 메뉴 공통 스타일 (기존 보라빛 계열) */
+.left-menu a,
+.right-menu a {
+    text-decoration: none;
+    color: #9D82AF; /* 기본 보라색 계열 */
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+/* 헤더에 마우스가 올라갔을 때 상단 유틸리티 메뉴 폰트 컬러 -> 갈색 계열로 변경 */
+header:hover .left-menu a,
+header:hover .right-menu a {
+    color: #56493B; /* 갈색 계열 컬러 (원하시는 톤으로 수정 가능) */
+}
+
+.right-menu {
+    display: flex;
+    gap: 20px; /* 마이페이지와 장바구니 사이 간격 */
+}
+
+/* 중앙 로고 이미지 영역 정렬 */
+.left-menu, .right-menu {
+    flex: 1;
+}
+
+.right-menu {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.logo-container {
+    text-align: center;
+    flex: 1;
+}
+
+/* 로고 이미지 스위칭 설정 */
+.logo-container a {
+    display: inline-block;
+    position: relative;
+}
+
+.logo-container img {
+    height: 22px; /* 로고 이미지 크기 */
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 기본 로고는 보이고, 호버용 로고는 숨김 */
+.logo-container .logo-default {
+    opacity: 1;
+}
+
+.logo-container .logo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* 헤더에 마우스가 올라갔을 때 로고 이미지 교체 */
+header:hover .logo-container .logo-default {
+    opacity: 0;
+}
+
+header:hover .logo-container .logo-hover {
+    opacity: 1;
+}
+
+/* 메인 네비게이션 메뉴 */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 70px;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    /* 평소 메뉴 색상 (기존 보라빛) */
+    color: #9D82AF; 
+    font-size: 18px;
+    font-weight: 400;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* 헤더에 마우스를 올렸을 때 메인 메뉴 글자 색도 갈색 계열로 변경 */
+header:hover .main-menu li a {
+    color: #5c4033; /* 갈색 계열 컬러 */
+}
+
+/* 특정 메뉴에 마우스를 더 가까이 올렸을 때의 진한 효과 */
+.main-menu li a:hover {
+    color: #5c4033; /* 더 진한 갈색 */
+    font-weight: 500;
+}
+
+/* ___________________ */
+
+/* Gift 배너 전체 영역 */
+.gift-banner {
+    width: 100%;
+    height: 500px; /* 배너의 높이 설정 (원하시는 세로 크기로 조절 가능) */
+    
+    /* 배경 이미지 설정 (이미지 경로를 실제 파일명으로 수정하세요) */
+    background-image: url('../../img/trialkit_banner.png'); 
+    background-size: cover;      /* 이미지를 배너에 가득 채움 */
+    background-position: center; /* 이미지가 중앙에 오도록 함 */
+    background-repeat: no-repeat;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 내부 콘텐츠 정렬 컨테이너 */
+.gift-banner-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 텍스트 박스 스타일 */
+.gift-text-box {
+    max-width: 600px;
+}
+
+.gift-text-box h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #56493B; /* 배경 이미지 위에서 잘 보이는 색상으로 조절 가능 */
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.gift-text-box p {
+    font-size: 17px;
+    color: #56493B; /* 배경 이미지 위에서 잘 보이는 색상으로 조절 가능 */
+    line-height: 1.8;
+}
+
+/* ___________ */
+
+/* 전체 섹션 레이아웃 */
+.hand-cream-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+/* 2열 그리드 레이아웃 (왼쪽 배너, 오른쪽/아래 제품들) */
+.hand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 100px;
+}
+
+.hand-banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 개별 상품 아이템 */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 상품 이미지 박스 (마우스 호버 시 살짝 확대) */
+.product-img-box {
+    width: 100%;
+    display: flex;
+    height: 373px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.product-img-box img {
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.product-img-box:hover img {
+    transform: scale(1.06);
+}
+
+/* 상품 텍스트 정보 */
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.product-info .desc {
+    font-size: 14px;
+    color: #56493B;
+    margin-bottom: 4px;
+}
+
+.product-info .vol {
+    font-size: 14px;
+    color: #56493B;
+    margin-bottom: 10px;
+}
+
+.product-info .price {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 장바구니 버튼 */
+.cart-btn {
+    display: inline-block;
+    width: 180px;
+    padding: 11px 0;
+    background-color: #56493B;
+    color: #F7F3ED;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.cart-btn:hover {
+    background-color: #43352b;
+}
+
+
+
+
+
+
+
+/* 푸터 전체 영역 (짙은 갈색 배경) */
+.footer {
+    width: 100%;
+    background-color: #56493B; /* 이미지에 맞는 짙은 웜그레이/브라운 톤 */
+    color: #F7F3ED;
+    padding: 60px 40px 40px 40px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 상단 영역 배치 */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.footer-menu-group {
+    display: flex;
+    gap: 80px; /* 메뉴 그룹 간격 */
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 항목 간격 */
+}
+
+/* 링크 공통 스타일 및 호버 시 밑줄 효과 */
+.footer a {
+    color: #F7F3ED;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    position: relative;
+}
+
+/* 마우스를 올렸을 때 글자 색상이 밝아지고 아래에 줄이 생기도록 설정 */
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+/* 인스타그램 링크 스타일 */
+.footer-social .insta-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #d1cbc1;
+}
+
+/* 중간 구분선 */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #83776a;
+    margin-bottom: 30px;
+}
+
+/* 하단 사업자 정보 및 약관 영역 */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 11.5px;
+    color: #F7F3ED;
+}
+
+.company-info p {
+    margin-bottom: 6px;
+    color: #F7F3ED
+}
+
+
+.footer-legal {
+    display: flex;
+    gap: 8px; /* 이용약관 | 사이트맵 등의 간격 */
+}
+
+.footer-legal a {
+    color: #F7F3ED;
+}
+/* ==========================================
+   📱 반응형 웹 미디어 쿼리 (Responsive Media Queries)
+   ========================================== */
+
+/* 태블릿 화면 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 15px 20px;
+    }
+    .main-menu {
+        gap: 30px;
+    }
+    .main-menu li a {
+        font-size: 16px;
+    }
+    
+    /* 3열 그리드를 태블릿에서는 2열로 조정 */
+    .hand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+    /* 태블릿에서는 대형 배너가 2칸을 모두 차지하도록 설정 */
+    .hand-banner-item {
+        grid-column: span 2;
+    }
+}
+
+/* 모바일 화면 (768px 이하) */
+@media screen and (max-width: 768px) {
+    /* 헤더 상단 유틸리티 및 로고 영역 정렬 최적화 */
+    .header-top {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    /* 네비게이션 메뉴 가로 스크롤 또는 간격 축소 */
+    .main-menu {
+        gap: 15px;
+        overflow-x: auto;
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+    .main-menu li a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* 배너 높이 및 폰트 크기 축소 */
+    .gift-banner {
+        height: 350px;
+    }
+    .gift-banner-container {
+        padding: 0 20px;
+    }
+    .gift-text-box h2 {
+        font-size: 24px;
+    }
+    .gift-text-box p {
+        font-size: 14px;
+    }
+
+    /* 모바일에서는 상품 그리드를 1열로 변경 */
+    .hand-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .hand-banner-item {
+        grid-column: span 1;
+        min-height: 280px;
+    }
+
+    /* 푸터 영역 세로 정렬 */
+    .footer {
+        padding: 40px 20px 30px 20px;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-menu-group {
+        gap: 40px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
