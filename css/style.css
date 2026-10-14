@@ -1,0 +1,620 @@
+@charset "UTF-8";
+
+/* 폰트 페이퍼로지 */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* ----------------------------------------------------- */
+
+/* 기본설정 */
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #56493B;
+    font-family: 'Paperozi';
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #56493B;
+}
+
+img {
+    display: block;
+}
+
+body {
+    -ms-overflow-style: none;
+    line-height: 1.5;
+
+    color: #56493B;
+    background-color: #f7f5f0;
+    margin: 0 auto;
+
+}
+
+.allwrap {
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+        max-width: 1440px;
+}
+
+.allwrap>div {
+    scroll-snap-align: center;
+}
+
+/* _______________________ */
+
+/* main */
+/* 상단 헤더 영역 전체 컨테이너 */
+header {
+    width: 100%;
+    /* 평소 헤더 배경색 */
+    background-color: #F7F3ED;
+    padding: 20px 40px;
+    /* 배경색과 글자색이 부드럽게 변하도록 전환 효과 부여 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 헤더 영역 전체에 마우스를 올렸을 때 배경색 변경 */
+header:hover {
+    background-color: #DCD2C8; /* 원하시는 배경색으로 조절 가능 */
+}
+
+/* 로고와 양옆 메뉴를 3단(좌/중앙/우)으로 정렬하는 컨테이너 */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* 좌측, 우측 메뉴 공통 스타일 (기존 보라빛 계열) */
+.left-menu a,
+.right-menu a {
+    text-decoration: none;
+    color: #9D82AF; /* 기본 보라색 계열 */
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+/* 헤더에 마우스가 올라갔을 때 상단 유틸리티 메뉴 폰트 컬러 -> 갈색 계열로 변경 */
+header:hover .left-menu a,
+header:hover .right-menu a {
+    color: #56493B; /* 갈색 계열 컬러 (원하시는 톤으로 수정 가능) */
+}
+
+.right-menu {
+    display: flex;
+    gap: 20px; /* 마이페이지와 장바구니 사이 간격 */
+}
+
+/* 중앙 로고 이미지 영역 정렬 */
+.left-menu, .right-menu {
+    flex: 1;
+}
+
+.right-menu {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.logo-container {
+    text-align: center;
+    flex: 1;
+}
+
+/* 로고 이미지 스위칭 설정 */
+.logo-container a {
+    display: inline-block;
+    position: relative;
+}
+
+.logo-container img {
+    height: 22px; /* 로고 이미지 크기 */
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 기본 로고는 보이고, 호버용 로고는 숨김 */
+.logo-container .logo-default {
+    opacity: 1;
+}
+
+.logo-container .logo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* 헤더에 마우스가 올라갔을 때 로고 이미지 교체 */
+header:hover .logo-container .logo-default {
+    opacity: 0;
+}
+
+header:hover .logo-container .logo-hover {
+    opacity: 1;
+}
+
+/* 메인 네비게이션 메뉴 */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 70px;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    /* 평소 메뉴 색상 (기존 보라빛) */
+    color: #9D82AF; 
+    font-size: 18px;
+    font-weight: 400;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* 헤더에 마우스를 올렸을 때 메인 메뉴 글자 색도 갈색 계열로 변경 */
+header:hover .main-menu li a {
+    color: #5c4033; /* 갈색 계열 컬러 */
+}
+
+/* 특정 메뉴에 마우스를 더 가까이 올렸을 때의 진한 효과 */
+.main-menu li a:hover {
+    color: #5c4033; /* 더 진한 갈색 */
+    font-weight: 500;
+}
+
+/* 배너 이미지 영역 */
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* ____________________________ */
+
+/* 베스트셀러 전체 섹션 */
+.bestseller {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.bestseller-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #56493B;
+    margin-bottom: 30px;
+}
+
+/* 상품 목록 그리드 */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.product-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 각 핸드크림 카드 영역 */
+.product-card {
+    position: relative;
+    width: 100%;
+    height: 420px; /* 카드 높이 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.product-card a{
+    height: 420px;
+    margin-top: 40px;
+}
+
+
+/* 뒷 배경 이미지 영역 (기본 상태: 세로로 축소되어 있음) */
+.product-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%; /* 3번 이미지처럼 평소에는 뒷 배경이 좁게(작게) 보임 */
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-position: center;
+    transition: height 0.4s ease, top 0.4s ease; /* 부드러운 전환 효과 */
+    z-index: 1;
+}
+
+/* 핸드크림 제품 이미지 */
+.product-img {
+    position: relative;
+    height: 85%; /* 튜브 크기 조절 */
+    width: auto;
+    z-index: 2; /* 배경 위에 오도록 설정 */
+    display: block;
+}
+
+/* 향 설명 텍스트 (기본 상태: 숨김) */
+.product-desc {
+    position: absolute;
+    bottom: 10px; /* 확장된 배경의 맨 아래로부터의 여백 */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #56493B; /* 배경 이미지 위에서 잘 보이도록 흰색 계열 지정 (원하시면 수정 가능) */
+    font-weight: 500;
+    z-index: 3; /* 배경과 튜브보다 위쪽에 위치 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* --- 마우스 호버 (Hover) 인터랙션 --- */
+
+/* 카드에 마우스를 올렸을 때 뒷 배경이 원래 크기로 확장 */
+.product-card:hover .product-bg {
+    height: 100%; /* 전체 영역을 꽉 채우도록 변경 */
+    top: 0;
+    transform: translateY(0);
+}
+
+/* 카드에 마우스를 올렸을 때 배경 안쪽 하단에 설명 글자가 나타남 */
+.product-card:hover .product-desc {
+    opacity: 1;
+}
+/* ________________ */
+
+
+
+
+/* 추천 전체 섹션 (.reco) */
+.reco {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+/* 각 추천 행 공통 레이아웃 */
+.reco-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #F7F3ED;
+}
+
+/* 두 번째 행은 좌우 반전 */
+.reco-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 이미지 박스 영역 */
+.reco-img-box {
+    flex: 2.0;
+    overflow: hidden;
+}
+
+.reco-img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* 텍스트 박스 영역 */
+.reco-text-box {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reco-text-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #56493B;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.reco-text-box p {
+    font-size: 14px;
+    color: #56493B;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* 버튼 기본 스타일 */
+.reco-btn {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #56493B;               /* 평소 글자색 */
+    background-color: transparent; /* 평소 배경색 (투명 또는 연한 배경) */
+    border: 1px solid #56493B;     /* 테두리 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reco-btn2{
+    margin-left: 50px;
+}
+
+/* 버튼 호버 (Hover) 시 배경색과 글자색 반전 */
+.reco-btn:hover {
+    background-color: #56493B;     /* 호버 시 배경색이 채워짐 */
+    color: #F7F3ED;                /* 호버 시 글자색이 밝게 변경 */
+}
+
+/* ___________ */
+
+/* 푸터 전체 영역 (짙은 갈색 배경) */
+.footer {
+    width: 100%;
+    background-color: #56493B; /* 이미지에 맞는 짙은 웜그레이/브라운 톤 */
+    color: #F7F3ED;
+    padding: 60px 40px 40px 40px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 상단 영역 배치 */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.footer-menu-group {
+    display: flex;
+    gap: 80px; /* 메뉴 그룹 간격 */
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 항목 간격 */
+}
+
+/* 링크 공통 스타일 및 호버 시 밑줄 효과 */
+.footer a {
+    color: #F7F3ED;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    position: relative;
+}
+
+/* 마우스를 올렸을 때 글자 색상이 밝아지고 아래에 줄이 생기도록 설정 */
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+/* 인스타그램 링크 스타일 */
+.footer-social .insta-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #d1cbc1;
+}
+
+/* 중간 구분선 */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #83776a;
+    margin-bottom: 30px;
+}
+
+/* 하단 사업자 정보 및 약관 영역 */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 11.5px;
+    color: #F7F3ED;
+}
+
+.company-info p {
+    margin-bottom: 6px;
+    color: #F7F3ED
+}
+
+
+.footer-legal {
+    display: flex;
+    gap: 8px; /* 이용약관 | 사이트맵 등의 간격 */
+}
+
+.footer-legal a {
+    color: #F7F3ED;
+}
+
+/* ==========================================
+   📱 반응형 웹 미디어 쿼리 (Responsive Media Queries)
+   ========================================== */
+
+/* 태블릿 화면 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 15px 20px;
+    }
+    .main-menu {
+        gap: 30px;
+    }
+    .main-menu li a {
+        font-size: 15px;
+    }
+    .product-grid {
+        flex-wrap: wrap;
+    }
+    .product-item {
+        flex: 0 0 48%;
+        margin-bottom: 30px;
+    }
+}
+
+/* 모바일 화면 (768px 이하) */
+@media screen and (max-width: 768px) {
+    /* 헤더 유틸리티 숨기거나 세로 정렬 필요시 조정, 여기선 간격 축소 */
+    .header-top {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    .main-menu {
+        gap: 15px;
+        overflow-x: auto;
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+    .main-menu li a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* 베스트셀러 1열로 변경 */
+    .product-grid {
+        flex-direction: column;
+    }
+    .product-item {
+        flex: 0 0 100%;
+    }
+
+    /* 추천 영역 세로 배치 */
+    .reco-row, 
+    .reco-row.reverse {
+        flex-direction: column;
+    }
+    .reco-text-box {
+        padding: 30px 20px;
+    }
+
+    /* 푸터 세로 배치 */
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-menu-group {
+        gap: 40px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

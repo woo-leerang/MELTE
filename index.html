@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELTÉ 멜테</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- 로고와 유틸리티 메뉴를 같은 줄에 배치하는 컨테이너 -->
+        <div class="header-top">
+            <!-- 좌측: 문의하기 -->
+            <div class="left-menu">
+                <a href="#">문의하기</a>
+            </div>
+
+            <!-- 중앙: 브랜드 로고 이미지 -->
+            <div class="logo-container">
+                <a href="./index.html">
+                    <img src="./img/logo_typo_lavender 1.png" alt="MELTÉ Logo" class="logo-default">
+                    <img src="./img/logo_typo_brown 1.png" alt="MELTÉ Logo Hover" class="logo-hover">
+                </a>
+            </div>
+
+            <!-- 우측: 마이페이지 / 장바구니 -->
+            <div class="right-menu">
+                <a href="#">마이페이지</a>
+                <a href="#">장바구니 0</a>
+            </div>
+        </div>
+
+        <!-- 메인 카테고리 메뉴 -->
+        <ul class="main-menu">
+            <li><a href="./gift/index.html">기프트 세트</a></li>
+            <li><a href="./new/index.html">신제품</a></li>
+            <li><a href="./hand/index.html">핸드크림</a></li>
+            <li><a href="./body/index.html">바디크림</a></li>
+            <li><a href="./solid/index.html">고체 향수</a></li>
+            <li><a href="./trial/index.html">체험 키트</a></li>
+        </ul>
+    </header>
+
+    <!-- main banner -->
+    <!-- 배너 이미지 영역 -->
+    <div class="banner">
+        <!-- 1번/2번 이미지에 있는 모델 배너를 넣어주세요 -->
+        <img src="./img/main_banner_model.png" alt="MELTÉ Hand Cream Banner">
+    </div>
+
+    <!-- ___________________ -->
+
+    <!-- 베스트셀러 섹션 -->
+    <section class="bestseller">
+        <h2 class="bestseller-title">Bestseller</h2>
+
+        <div class="product-grid">
+            <!-- 1번 상품: Lavender Musk -->
+            <div class="product-item">
+                <div class="product-card">
+                    <div class="product-bg" style="background-image: url('./img/best_lavender_bg.png');"></div>
+                    <a href="./hand/index.html"><img src="./img/best_lavender 1.png" alt="Lavender Musk Hand Cream" class="product-img"></a>
+                    <div class="product-desc">Lavender / Musk / Wood</div>
+                </div>
+            </div>
+
+            <!-- 2번 상품: Milk Vanilla -->
+            <div class="product-item">
+                <div class="product-card">
+                    <div class="product-bg" style="background-image: url('./img/best_vanilla_bg.png');"></div>
+                    <a href="./hand/index.html"><img src="./img/bedt_vanilla 1.png" alt="Milk Vanilla Hand Cream" class="product-img"></a>
+                    <div class="product-desc">Vanilla / Milk / Sandalwood</div>
+                </div>
+            </div>
+
+            <!-- 3번 상품: Fig Cream -->
+            <div class="product-item">
+                <div class="product-card">
+                    <div class="product-bg" style="background-image: url('./img/best_fig_bg.png');"></div>
+                    <a href="./hand/index.html"><img src="./img/best_fig 1.png" alt="Fig Cream Hand Cream" class="product-img"></a>
+                    <div class="product-desc">Fig / Coconut / Musk</div>
+                </div>
+            </div>
+
+            <!-- 4번 상품: Amber Wood -->
+            <div class="product-item">
+                <div class="product-card">
+                    <div class="product-bg" style="background-image: url('./img/best_amber_bg.png');"></div>
+                    <a href="./hand/index.html"><img src="./img/best_amber 1.png" alt="Amber Wood Hand Cream" class="product-img"></a>
+                    <div class="product-desc">Amber / Sandalwood / Vanilla</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ________________________ -->
+
+    <!-- 추천 섹션 -->
+    <section class="reco">
+
+        <!-- 첫 번째 추천 블록 (이미지 왼쪽 / 텍스트 오른쪽) -->
+        <div class="reco-row">
+            <div class="reco-img-box">
+                <img src="./img/main_img_01.png" alt="바디 케어 제품들">
+            </div>
+            <div class="reco-text-box">
+                <h3>향기를 더한 보습</h3>
+                <p>피부에 부드럽게 녹아내려 은은하게 머무는 향기<br>나만의 분위기를 완성하는 바디 케어</p>
+                <a href="./hand/index.html" class="reco-btn">멜테 제품 보러가기</a>
+            </div>
+        </div>
+
+        <!-- 두 번째 추천 블록 (텍스트 왼쪽 / 이미지 오른쪽) -->
+        <div class="reco-row reverse">
+
+            <div class="reco-img-box">
+                <img src="./img/main_img_02.png" alt="모델과 제품들">
+            </div>
+            <div class="reco-text-box">
+                <h3>나에게 맞는 향을 찾는 여정</h3>
+                <a href="./trial/index.html" class="reco-btn reco-btn2">샘플 제품 구매하기</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- _________________ -->
+
+    <!-- 푸터 영역 -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- 상단 메뉴 및 인스타그램 링크 영역 -->
+            <div class="footer-top">
+                <!-- 왼쪽 고객센터 및 브랜드 메뉴 -->
+                <div class="footer-menu-group">
+                    <ul class="footer-menu">
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">배송</a></li>
+                        <li><a href="#">반품</a></li>
+                        <li><a href="#">배송 조회하기</a></li>
+                        <li><a href="#">주문 현황 조회</a></li>
+                    </ul>
+                    <ul class="footer-menu">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">개정 약관</a></li>
+                        <li><a href="#">채용 정보</a></li>
+                    </ul>
+                </div>
+
+                <!-- 오른쪽 인스타그램 링크 -->
+                <div class="footer-social">
+                    <a href="#" class="insta-link">
+                        <span class="insta-icon"><img src="./img/insta_lcon.png" alt="인스타그램"></span> 인스타그램
+                    </a>
+                </div>
+            </div>
+
+            <!-- 구분선 -->
+            <hr class="footer-divider">
+
+            <!-- 하단 사업자 정보 및 이용약관 링크 영역 -->
+            <div class="footer-bottom">
+                <div class="company-info">
+                    <p>(주) 멜테 | 대표자 : 김이멜</p>
+                    <p>사업자 번호 : 000-00-00000 통신판매신고 : 2036-서울유남-00000 <a href="#">사업자정보확인하기</a></p>
+                    <p>주소 : 서울특별시 유남구 초록대로 38, 필름타워 4층 | 대표전화 000-0000</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">이용약관</a> |
+                    <a href="#">사이트맵</a> |
+                    <a href="#">개인정보처리방침</a> |
+                    <a href="#">쿠키 세팅</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ___________________________ -->
+
+</body>
+
+</html>
